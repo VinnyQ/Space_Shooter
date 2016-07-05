@@ -14,12 +14,12 @@ public class EvasiveManeuver : MonoBehaviour {
 	private float currentSpeed;
 	private float targetManeuver;
 	private Rigidbody rb;
-	private Transform playerTransform;
+	//private Transform playerTransform;
 
 	void Start () 
 	{
 		rb = GetComponent<Rigidbody> ();
-		playerTransform = GameObject.FindGameObjectWithTag ("Player").transform;  //use this in Evade if want enemies to go after player
+		//playerTransform = GameObject.FindGameObjectWithTag ("Player").transform;  //use this in Evade if want enemies to go after player
 		currentSpeed = rb.velocity.z;
 		StartCoroutine (Evade ());
 	}
